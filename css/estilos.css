@@ -4,8 +4,56 @@ selector{
 }
 */
 body{
-    background-color: rgb(220, 183, 255);
+    background-color: rgb(223, 69, 107);
 }
 h1,h2{
     text-align: center;
+}
+header{
+    background-image: url('../img/Recetas.jpg');
+    height: 300px;
+    display: flex;
+    justify-content: flex-end;
+}
+header h1{
+    background-color: rgba(206, 189, 221, 0.658);
+    padding: 10px;
+    width: 300px;
+    height: 50px;
+}
+nav{
+    background-color: transparent;
+    height: 50px;
+    position: fixed;
+    top: 0px;
+    left: 50px;
+}
+nav ol li{
+    background-color: rgb(31, 18, 31);
+    display: inline;
+    color: white;
+    padding: 15px;
+    margin: 0px 10px;
+}
+article{
+    padding-top: 50px;
+    background: linear-gradient(red, white);
+    width: 80%;
+    margin-left: 10%;
+}
+article#casera{
+    background: linear-gradient(rgb(233, 163, 201), rgb(226, 58, 184));
+}
+nav ol li a{
+    text-decoration: none;
+    color: wheat;       
+}
+/* cursor */
+nav ol li:hover{
+    background-color: yellow;
+    color: black;
+    box-shadow: 5px 3px black;
+}
+nav ol li a:hover{
+    color: black;
 }
