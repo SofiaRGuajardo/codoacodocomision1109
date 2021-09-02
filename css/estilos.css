@@ -11,9 +11,13 @@ h1,h2{
 }
 header{
     background-image: url('../img/Recetas.jpg');
-    height: 300px;
+    height: 150px;
     display: flex;
     justify-content: flex-end;
+    position: fixed;
+    width: 80%;
+    top: 8px;
+    margin-left: 10%;
 }
 header h1{
     background-color: rgba(206, 189, 221, 0.658);
@@ -38,7 +42,7 @@ nav ol li{
 article{
     padding-top: 50px;
     background: linear-gradient(red, white);
-    width: 80%;
+    width: 80% !important;
     margin-left: 10%;
 }
 article#casera{
@@ -56,4 +60,13 @@ nav ol li:hover{
 }
 nav ol li a:hover{
     color: black;
+}
+/* main{
+    width: 80%;
+} */
+h4 font{
+    color: black !important;
+}
+h4 font{
+    color: blue;
 }
