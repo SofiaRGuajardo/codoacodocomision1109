@@ -29,4 +29,43 @@ let saludar = saludo + nombre;
 let elemento = document.getElementById("principal");
 // console.log(elemento)
 elemento.innerHTML="<h1 class='text-center bg-info'>"+ saludar + "</h1>";
-document.write("<h1 class='text-center bg-info'>"+ saludar + "</h1>");
+document.write("<div class='container'><div class='row' id='principal'><h1 class='text-center bg-info'>"+ saludar + "</h1></div></div>");
+
+document.write(`
+    <div class="container"><div class="row" id="principal">
+    <h1 class='text-center bg-info'> ${saludar}</h1></div></div>
+`);
+
+// let mensaje = prompt("Menú \n 1. Papas Fritas \n 2. Milanesas con fritas \n 3. Milanesa napolitana");
+/*console.log(mensaje)
+if(mensaje === "1"){
+    elemento.innerHTML="<p>Disfrutá de tus papas!</p>";
+}else if(mensaje === "2"){
+    elemento.innerHTML="<p>Disfrutá de tus milanesas con papas!</p>";
+}else if(mensaje === "3"){
+    elemento.innerHTML="<p>Disfrute de su milanesa napolitana!</p>";
+}else{
+    elemento.innerHTML="No es una opción";
+}
+
+switch (mensaje) {
+    case "1":
+        elemento.innerHTML="<p>Disfrutá de tus papas!</p>";
+        break; //deja el switch
+    case "2":
+        elemento.innerHTML="<p>Disfrutá de tus milanesas con papas!</p>";
+        break;
+    case "3":
+        elemento.innerHTML="<p>Disfrute de su milanesa napolitana!</p>";
+        break;
+    default:
+        elemento.innerHTML="No es una opción"
+        let mensaje = prompt("Menú \n 1. Papas Fritas \n 2. Milanesas con fritas \n 3. Milanesa napolitana");
+}
+
+let num = parseInt(prompt("Ingresa el primer número"));
+let num2 = parseInt(prompt("Ingresa el segundo número"));
+
+let resultado = "<p>El resultado de: " + num + " y " + num2 + " es: " + (num + num2) + "</p>";
+elemento.innerHTML=resultado;
+*/
