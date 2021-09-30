@@ -22,7 +22,7 @@ function sumar(){
         case "/":
             resultado = num / num2;
             miDiv.innerHTML +="<p> El resultado de la división de "+num +" y "+num2+ " es: " + resultado + "</p>";
-        
+            break;
         default:
 
         break;
