@@ -1,0 +1,73 @@
+.navbar{
+    background-color: #353A40;
+}
+.hero-image{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/ba1.jpg);
+    height: 600px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative; 
+} 
+.hero-text{
+    color:rgb(255, 255, 255);
+}
+.btncompras{
+    background-color: #29A63C;
+    border: #29A63C;
+}
+.textoradores{
+    margin-top: 20px;
+    text-align: center;
+}
+.oradores{
+    width: 350px;
+}
+.pconoce{
+    font-size: 12px;
+    margin-bottom: 0px;
+}
+.ptexto{
+    font-size: 14px;
+}
+.card-text{
+    font-size: 14px;
+}
+.badge{
+    font-size: 11px;
+}
+.card2{
+    margin-top: 40px;
+    background-color: #353A40;
+    color: white;
+    font-size: 13px;
+    border-radius: 0px;
+}
+.textoctubre{
+    padding-top: 15px;
+    padding-left: 15px;
+}
+.button3{
+    font-size: 12px;
+}
+.textfomulario{
+    font-size: 14px;
+}
+.textereaform{
+    font-size: 18px;
+}
+.form-text{
+    font-size: 12px;
+}
+.button2{
+    background-color: #95BF3B;
+    border: #95BF3B;
+}
+.footer1{
+    background: linear-gradient(90deg, rgba(29,55,68,1) 0%, rgba(29,55,68,1) 35%, rgba(30,83,114,1) 100%);
+    margin-top: 20px;
+}
+.footerlist{
+    margin-top: 10px;
+    margin-right: 20px;
+}
