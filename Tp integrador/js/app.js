@@ -4,7 +4,7 @@ const comprarTicket=()=>{
     container.innerHTML=`
         <div class="container">
             <div class="row">
-                <div class="col col-md-10 offset-md-1 col-lg-8 offset-lg-2 pt-2">
+                <div class="col col-md-10 offset-md-1 col-lg-8 offset-lg-2 pt-3">
                     <div class="card-group">
                         <div class="card">
                             <div class="card-body border border-primary mr-1">
@@ -19,10 +19,10 @@ const comprarTicket=()=>{
                             </div>
                         </div>
                         <div class="card">
-                            <div class="card-body border border-primary mr-1">
-                                <h5 class="card-title text-center">Estudiantes</h5>
+                            <div class="card-body border border-info mr-1">
+                                <h5 class="card-title text-center">Trainee</h5>
                                 <p class="card-text text-center">Tienen un descuento</p>
-                                <p class="card-title text-center font-weight-bold">80%</p>
+                                <p class="card-title text-center font-weight-bold">50%</p>
                                 <p class="card-text text-center">
                                     <small class="text-muted">
                                         * presentar documentación
@@ -31,10 +31,10 @@ const comprarTicket=()=>{
                             </div>
                         </div>
                         <div class="card">
-                            <div class="card-body border border-primary mr-1">
-                                <h5 class="card-title text-center">Estudiantes</h5>
+                            <div class="card-body border border-warning mr-1">
+                                <h5 class="card-title text-center">Junior</h5>
                                 <p class="card-text text-center">Tienen un descuento</p>
-                                <p class="card-title text-center font-weight-bold">80%</p>
+                                <p class="card-title text-center font-weight-bold">15%</p>
                                 <p class="card-text text-center">
                                     <small class="text-muted">
                                         * presentar documentación
@@ -87,8 +87,8 @@ const comprarTicket=()=>{
                             </div>
                         </div>
                         <div class="form-row d-flex">
-                            <button class="btn btn-lg btn-success col-6 m-1">Borrar</button>
-                            <button class="btn btn-lg btn-success col-6 m-1">Resumen</button>
+                            <button class="btn btn-lg btn-light text-light col-6 m-1" style="background-color: #95BF3B">Borrar</button>
+                            <button class="btn btn-lg btn-light text-light col-6 m-1" style="background-color: #95BF3B">Resumen</button>
                         </div>
                         </div>
                     </form>

@@ -6,10 +6,12 @@
 //     nombres.push(a)
 //     console.log(nombres)
 // };
-
+// let nombre={
+//     nombre:nombre
+// }
 // objetos
 // const agregarNombres=()=>{
-//     let nombre={
+//     nombre={
 //         nombre:"Luis",
 //         apellido:"Navas"
 //     };
@@ -17,7 +19,7 @@
 //     console.log(nombres)
 // }
 // const nomb=()=>{
-//     let nombres ={
+//     nombres ={
 //         nombre: "Regulo",
 //         apellido: "Luna"
 //     }
