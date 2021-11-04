@@ -1,5 +1,10 @@
 let container = document.getElementById("seccion");
- 
+
+const ticket = 200;
+const descEstudiante = ticket * 0.2;
+const descTrainee = ticket * 0.5;
+const descJunior = ticket * 0.85;
+
 const comprarTicket=()=>{
     container.innerHTML=`
         <div class="container">
@@ -53,42 +58,42 @@ const comprarTicket=()=>{
             </div>
             <div class="row">
                 <div class="col col-md-10 offset-md-1 col-lg-8 offset-lg-2 pt-2">
-                    <form> 
+                    <form id="miFormulario"> 
                         <div class="form-row">
                             <div class="d-flex">
                                 <div class="form-row col-6 col-md-6 m-1">
-                                    <input type="text" class="form-control" placeholder="Nombre"/>
+                                    <input id="nombre" type="text" class="form-control" placeholder="Nombre"/>
                                 </div>
                                 <div class="form-row col-6 col-md-6 m-1">
-                                    <input type="text" class="form-control" placeholder="Apellido"/>
+                                    <input id="apellido" type="text" class="form-control" placeholder="Apellido"/>
                                 </div>
                             </div>
                             <div class="form-group col-md-12 m-1">
-                                <input type="email" class="form-control" placeholder="Correo"/>
+                                <input id="email" type="email" class="form-control" placeholder="Correo"/>
                             </div>
                             <div class="d-flex">
                                 <div class="form-group col-6 col-md-6 m-1">
-                                    <label for="">Cantidad</label>
-                                    <input id="cantidadEntradas" type="text" class="form-control" placeholder="cantidad"/>
+                                    <label for="cantidadEntradas">Cantidad</label>
+                                    <input id="cantidadEntradas" type="text" class="form-control" placeholder="Cantidad">
                                 </div>
-                                <div class="form-group col-6 col-md-6 m-1">
-                                <label for="">Categoría</label>
-                                <select class="form-select" id="inputSelect">
-                                    <option value="estudiante">Estudiantes</option>
-                                    <option value="trainee">Trainee</option>
-                                    <option value="junior">Junior</option>
+                            <div class="form-group col-6 col-md-6 m-1">
+                                <label for="categorias">Categoría</label>
+                                <select class="form-select" id="categorias">
+                                    <option id="estudiante" value="estudiante">Estudiantes</option>
+                                    <option id="trainee" value="trainee">Trainee</option>
+                                    <option id="junior" value="junior">Junior</option>
                                 </select>
                                 </div>
                             </div>
                         </div>
-                        <div class="form-row">
-                            <div class="alert alert-primary" role="alert">
+                        <div class="form-row col-md-12 m-1">
+                            <div class="alert alert-primary" role="alert" id="totalaPagar">
                             Total a Pagar: $
-                            </div>
+                        </div>
                         </div>
                         <div class="form-row d-flex">
-                            <button class="btn btn-lg btn-light text-light col-6 m-1" style="background-color: #95BF3B">Borrar</button>
-                            <button class="btn btn-lg btn-light text-light col-6 m-1" style="background-color: #95BF3B">Resumen</button>
+                            <button type="reset" onclick="fun()" class="btn btn-lg btn-light text-light col-6 m-1" style="background-color: #95BF3B">Borrar</button>
+                            <button class="btn btn-lg btn-light text-light col-6 m-1" style="background-color: #95BF3B" onclick="resumen()" type="button">Resumen</button>
                         </div>
                         </div>
                     </form>
@@ -96,4 +101,19 @@ const comprarTicket=()=>{
             </div>
         </div>
     `;
+};
+
+const resumen=()=>{
+    let cantidad = document.getElementById("cantidadEntradas").value;
+    let descuento = document.getElementById("categorias").value;
+    let totalaPagar = document.getElementById("totalaPagar");
+    if (descuento === "estudiante"){
+        totalaPagar.innerHTML += descEstudiante * parseInt(cantidad);
+    }else if (descuento === "trainee"){
+        totalaPagar.innerHTML += descTrainee * parseInt(cantidad);
+    }else if (descuento === "junior"){
+        totalaPagar.innerHTML += descJunior * parseInt(cantidad);
+    }else{
+        totalaPagar.innerHTML="<p>Cantidad Erronea</p>";
+    }
 };
