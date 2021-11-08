@@ -111,9 +111,7 @@ const resumen=()=>{
         totalaPagar.innerHTML += descEstudiante * parseInt(cantidad);
     }else if (descuento === "trainee"){
         totalaPagar.innerHTML += descTrainee * parseInt(cantidad);
-    }else if (descuento === "junior"){
-        totalaPagar.innerHTML += descJunior * parseInt(cantidad);
     }else{
-        totalaPagar.innerHTML="<p>Cantidad Erronea</p>";
+        totalaPagar.innerHTML += descJunior * parseInt(cantidad);
     }
 };
