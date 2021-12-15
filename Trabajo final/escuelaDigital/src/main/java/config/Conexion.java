@@ -2,6 +2,7 @@ package config;
 
 import java.sql.*;
 
+
 public class Conexion {
     public String driver = "com.mysql.cj.jdbc.Driver";
     public Connection getConection(){
@@ -9,15 +10,13 @@ public class Conexion {
         Connection conexion = null;
         try{
             Class.forName(driver);
-            conexion = DriverManager.getConnection(
-                    "jdbc:mysql://localhost:3306/comision1109",
-                    "cacejercicio", "111222");
+            conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/comision1109", "cacejercicio", "111222");
         }catch(ClassNotFoundException | SQLException e){
             System.out.println(e.toString());
         }
             return conexion;
     }
-    /*public static void main (String regulo[]) throws SQLException{
+   public static void main (String regulo[]) throws SQLException{
         Connection c = null;
         Conexion con = new Conexion();
         c = con.getConection();
@@ -34,9 +33,10 @@ public class Conexion {
             String email = rs.getString("email");
             String telefono = rs.getString("telefono");
             
-            System.out.println("id: " + id + ". Nombre: " + nombres +
-                    ". Apellido: " + apellidos + ". Email: " + email +
-                    ". Telefono: " + telefono);
+            System.out.println(" Id: " + id + " Nombre: "+ nombres+ " Apellidos: "
+            + apellidos +" Email: "+ email + " Telefono: "+
+                    telefono);
         }
-    }*/
+        
+    }
 }

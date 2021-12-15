@@ -3,13 +3,13 @@ package config;
 import java.sql.*;
 
 public class Conexion {
-    public String driver="com.mysql.cj.jdbc.Driver";
+    public String driver = "com.mysql.cj.jdbc.Driver";
     public Connection getConection(){
         Connection conexion = null;
         try{
             Class.forName(driver);
-            conexion = DriverManager.getConnection("jdbc:mysql://localhost/cooking",
-                    "root", "");
+            conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/cooking",
+                    "cacejercicio", "111222");
         }catch(ClassNotFoundException | SQLException e){
             System.out.println(e.toString());
         }
@@ -37,5 +37,9 @@ public class Conexion {
                     "Porciones: " + porciones + "Ingredientes: " + ingredientes +
                     "Preparacion: " + preparacion);
         }
+    }
+
+    public Connection getConnection() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }*/
 }

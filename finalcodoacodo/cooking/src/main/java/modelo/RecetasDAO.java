@@ -17,7 +17,7 @@ public class RecetasDAO {
        List<Recetas> lista = new ArrayList<>();
        /*List clase abstracta*/
        try{
-           ps = conexion.prepareStatement("SELECT * FROM lista ");
+           ps = conexion.prepareStatement("SELECT * FROM lista");
            rs = ps.executeQuery();
            
            while(rs.next()){
@@ -27,7 +27,7 @@ public class RecetasDAO {
             String porciones = rs.getString("porciones");
             String ingredientes = rs.getString("ingredientes");
             String preparacion = rs.getString("preparacion");
-            Recetas recetas = new Recetas(id,nombre,tiempo,porciones,ingredientes,preparacion);
+            Recetas recetas = new Recetas(id, nombre, tiempo, porciones, ingredientes, preparacion);
             lista.add(recetas);
            }
            return lista;
@@ -43,8 +43,7 @@ public class RecetasDAO {
         Recetas receta = null;
         
         try{
-           ps = conexion.prepareStatement("SELECT id,nombre,tiempo,porciones,ingredientes,prepacion FROM lista"
-                   + "Where id = ?");
+           ps = conexion.prepareStatement("SELECT id,nombre,tiempo,porciones,ingredientes,preparacion FROM lista Where id = ?");
            ps.setInt(1, _id);
            rs = ps.executeQuery();
            
@@ -55,9 +54,10 @@ public class RecetasDAO {
                 String porciones = rs.getString("porciones");
                 String ingredientes = rs.getString("ingredientes");
                 String preparacion = rs.getString("preparacion");
-                receta= new Recetas(id,nombre,tiempo,porciones,ingredientes,preparacion);
+                receta = new Recetas(id,nombre,tiempo,porciones,ingredientes,preparacion);
             }
            return receta;
+           
         }catch(SQLException e){
             System.out.println(e.toString());
             return null;
@@ -66,13 +66,13 @@ public class RecetasDAO {
     public boolean insertarReceta(Recetas receta){
         PreparedStatement ps;
         try{
-            ps = conexion.prepareStatement("INSERT INTO lista"
-                    + "(nombre,tiempo,porciones,ingredientes,preparacion)VALUES(?,?,?,?,?)");
-            ps.setString(1, receta.getNombre());
-            ps.setString(2, receta.getTiempo());
-            ps.setString(3, receta.getPorciones());
-            ps.setString(4, receta.getIngredientes());
-            ps.setString(5, receta.getPreparacion());
+            ps = conexion.prepareStatement(
+            "INSERT INTO lista(nombre,tiempo,porciones,ingredientes,preparacion)VALUES(?,?,?,?,?)");
+            ps.setString(1,receta.getNombre());
+            ps.setString(2,receta.getTiempo());
+            ps.setString(3,receta.getPorciones());
+            ps.setString(4,receta.getIngredientes());
+            ps.setString(5,receta.getPreparacion());
             ps.execute();
             return true;
         }catch(SQLException e){
@@ -83,14 +83,14 @@ public class RecetasDAO {
     public boolean actualizarReceta(Recetas receta){
         PreparedStatement ps;
         try{
-            ps = conexion.prepareStatement("UPDATE lista SET nombre=?, tiempo=?, "
-                    + "porciones=?, ingredientes=?, preparacion=? WHERE id=?");
-            ps.setString(1, receta.getNombre());
-            ps.setString(2, receta.getTiempo());
-            ps.setString(3, receta.getPorciones());
-            ps.setString(4, receta.getIngredientes());
-            ps.setString(5, receta.getPreparacion());
-            ps.setInt(6, receta.getId());
+            ps = conexion.prepareStatement(
+    "UPDATE lista SET nombre=?, tiempo=?, porciones=?, ingredientes=?, preparacion=? WHERE id=?");
+            ps.setString(1,receta.getNombre());
+            ps.setString(2,receta.getTiempo());
+            ps.setString(3,receta.getPorciones());
+            ps.setString(4,receta.getIngredientes());
+            ps.setString(5,receta.getPreparacion());
+            ps.setInt(6,receta.getId());
             ps.execute();
             return true;
         }catch(SQLException e){
@@ -103,7 +103,7 @@ public class RecetasDAO {
         try{
             ps = conexion.prepareStatement("DELETE FROM lista WHERE id=?");
             ps.setInt(1, _id);
-            ps.execute();
+            ps.execute(); 
             return true;
         }catch(SQLException e){
             System.out.println(e.toString());

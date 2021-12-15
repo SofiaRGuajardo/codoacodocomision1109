@@ -21,37 +21,42 @@
             mid = Integer.parseInt(id);
             Alumnos resultado=null;
             AlumnosDAO alumnosDao = new AlumnosDAO();
-            resultado = alumnosDao.mostrarAlumnos(mid);
+            resultado = alumnosDao.mostrarAlumno(mid);
         %>
         <h1 class="text-center">Modificar Registro</h1>
+        <!-- agregar el id oculto -->
         <div class="container">
             <div class="row d-flex justify-content-center">
                 <form class="p-5 w-50" action="AlumnosController?accion=insert"
                       method="POST">
                     <div class="mb-3">
                         <label for="id" class="form-label"></label>
-                        <input type="hidden" class="form-control" id="id" name="id" 
-                               value="<%=resultado.getId()%>" />
+                        <input type="hidden" class="form-control" id="id"
+                               name="id" value="<%=resultado.getId()%>"/>
                     </div>
                     <div class="mb-3">
                         <label for="nombre" class="form-label">Nombre</label>
-                        <input type="text" class="form-control" id="nombre" name="nombre" value="<%=resultado.getNombres()%>" />
+                        <input type="text" class="form-control" id="nombre"
+                               name="nombre" value="<%=resultado.getNombres()%>"/>
                     </div>
                     <div class="mb-3">
                         <label for="apellido" class="form-label">Apellido</label>
-                        <input type="text" class="form-control" id="apellido" name="apellido" value="<%=resultado.getApellidos()%>"/>
+                        <input type="text" class="form-control" id="apellido"
+                               name="apellido" value="<%=resultado.getApellidos()%>"/>
                     </div>
                     <div class="mb-3">
                         <label for="email" class="form-label">Email</label>
-                        <input type="text" class="form-control" id="email" name="email" value="<%=resultado.getEmail()%>" />
+                        <input type="text" class="form-control" id="email"
+                               name="email" value="<%=resultado.getEmail()%>"/>
                     </div>
                     <div class="mb-3">
-                        <label for="telefono" class="form-label">Teléfono</label>
-                        <input type="text" class="form-control" id="telefono" name="telefono" value="<%=resultado.getTelefono()%>" />
+                        <label for="telefono" class="form-label">Telefono</label>
+                        <input type="text" class="form-control" id="telefono"
+                               name="telefono" value="<%=resultado.getTelefono()%>"/>
                     </div>
-                    <button type="submit" class="btn btn-success">Agregar</button>
+                    <button type="submit" class="btn btn-primary">Agregar</button>
+                    
                 </form>
-                
             </div>
         </div>
     </body>
