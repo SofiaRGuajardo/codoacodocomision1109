@@ -2,7 +2,6 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-import java.sql.ResultSetMetaData;
 import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -11,7 +10,6 @@ public class Persistencia {
     private Connection cn;
     private ResultSet rs;
     private PreparedStatement ps;
-    private ResultSetMetaData rsm;
     
     public String servidor, basededatos, usuario, clave, ejecutar;
     
@@ -24,7 +22,8 @@ public class Persistencia {
         usuario = "cacejercicio";
         clave= "111222";
         
-        cn=DriverManager.getConnection("jdbc:mysql://" + servidor + basededatos, usuario, clave);
+        cn=DriverManager.getConnection("jdbc:mysql://localhost:3306/cooking",
+                    "cacejercicio", "111222");
         
         } catch (ClassNotFoundException ex) {
             Logger.getLogger(Persistencia.class.getName()).log(Level.SEVERE, null, ex);

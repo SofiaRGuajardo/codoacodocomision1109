@@ -49,6 +49,9 @@
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="escribinos.jsp">Escribinos</a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="acceder.jsp">Acceder</a>
+          </li>
         </ul>
       </div>
     </div>
@@ -71,7 +74,7 @@
         <div class="col-lg-4 col-sm-12 col-md-6">
           <div class="card card-blog">
             <div class="card-image">
-              <a href="#"> <img class="img img-raised" src="http://adamthemes.com/demo/code/cards/images/blog01.jpeg"> </a>
+              <a href="#"> <img class="img img-raised" src="img/alfajor.png"> </a>
                 <div class="ripple-cont"></div>
             </div>
               <div class="table">
@@ -86,7 +89,7 @@
         <div class="col-lg-4 col-sm-12 col-md-6">
           <div class="card card-blog">
             <div class="card-image">
-              <a href="#"> <img class="img img-raised" src="http://adamthemes.com/demo/code/cards/images/blog01.jpeg"> </a>
+              <a href="#"> <img class="img img-raised" src="img/vitel.jpg"> </a>
             </div>
             <div class="table">
               <h6 class="category text-danger">Navidad</h6>
@@ -100,14 +103,14 @@
         <div class="col-lg-4 col-sm-12 col-md-6">
           <div class="card card-blog">
             <div class="card-image">
-              <a href="#"> <img class="img img-raised" src="http://adamthemes.com/demo/code/cards/images/blog01.jpeg"> </a>
+              <a href="#"> <img class="img img-raised" src="img/helado.jpg"> </a>
             </div>
             <div class="table">
-              <h6 class="category text-success">Consectetur</h6>
+              <h6 class="category text-success">Verano</h6>
               <h4 class="card-caption">
-                <a href="#" data-bs-toggle="modal" data-bs-target="#">Quisque id elit maximus, pretium diam at mollis elit</a>
+                <a href="#" data-bs-toggle="modal" data-bs-target="#helado">Helado de Frutilla</a>
               </h4>
-              <p class="card-description"> Tiempo total: 130 min. <br> Porciones: 10</p> 
+              <p class="card-description"> Tiempo total: 30 min. <br> Porciones: 4 personas</p> 
             </div>
           </div>
         </div>
@@ -209,6 +212,50 @@
             <p>3. Preparar la salsa para el vitel toné: en la licuadora poner la mayonesa, las anchoas, el atún, 1 cucharada de caldo (si es necesario agregarle otra después) y las alcaparras. Licuar todo hasta lograr una salsa homogénea, suave y sin grumos (hay que probar con una cucharadita).</p>
             <p>4. Cuando la carne está bien fría es el momento de cortarla en rodajas finas (el grosor va a gusto personal o de acuerdo a la cantidad de porciones que se necesite) y disponerlas una al lado de la otra dentro de una fuente (o el plato en el que se va a servir).</p>
             <p>5. Regar con la mayonesa de atún las rodajas de vitel toné hasta cubrirlas parcialmente o por completo. Decorar con alcaparras y servir.</p>
+          </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+<div class="modal" tabindex="-1" id="helado">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header" style="background-color: #E5E5E5;">
+        <h5 class="modal-title">Helado de Frutilla</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <h3 class="fuentemodal">Ingredientes</h3>
+          <div class="row">
+            <div class="col-6">
+              <ul>
+                <li>150 cm3 de leche</li>
+                <li>250 g de frutillas</li>
+                <li>1 cda. de azúcar</li>
+              </ul>
+            </div>
+            <div class="col-6">
+              <ul>
+                <li>50 cm3 de crema</li>
+                <li>2 cdas. de azúcar.</li>
+              </ul>
+            </div>
+          </div>
+        <h3 class="fuentemodal">Preparación</h3>
+        <div class="row">
+          <div class="col-6">
+            <p>1. Poner las frutillas junto con el azúcar y dejar macerar por media hora. Reservar algunas frutillas en trozos para decorar.</p>
+            <p>2. Procesar el resto de las frutillas con la leche, el azúcar y la miel.</p>
+            <p>3. Batir a ½ punto la crema y el azúcar restante e incorporar a la preparación anterior. </p>
+          </div>
+          <div class="col-6">
+            <p>4. Llenar los moldes y llevar al freezer.</p>
+            <p>Tips: se puede reemplazar la leche por yogurt de frutillas. Humedecer el molde antes de poner la preparación para favorecer el desmolde. Freezarlos 5 hs cómo mínimo antes de desmoldarlos.</p>
           </div>
       </div>
       <div class="modal-footer">

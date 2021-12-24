@@ -103,8 +103,23 @@ public class RecetasDAO {
         try{
             ps = conexion.prepareStatement("DELETE FROM lista WHERE id=?");
             ps.setInt(1, _id);
-            ps.execute(); 
+            ps.execute();
             return true;
+        }catch(SQLException e){
+            System.out.println(e.toString());
+            return false;
+        }
+    }
+    public boolean ingresarUsuario(String usuario, String password){
+        PreparedStatement ps;
+        ResultSet rs; 
+        try{
+            ps = conexion.prepareStatement("SELECT email, password FROM usuarios WHERE email=?");
+            ps.setString(1, usuario);
+            rs = ps.executeQuery();
+            while(rs.next()){
+                return usuario.equals(rs.getString("email")) && password.equals(rs.getString("password"));
+            }return false;
         }catch(SQLException e){
             System.out.println(e.toString());
             return false;

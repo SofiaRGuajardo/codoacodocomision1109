@@ -47,6 +47,9 @@
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="escribinos.jsp">Escribinos</a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="acceder.jsp">Acceder</a>
+          </li>
         </ul>
       </div>
     </div>
