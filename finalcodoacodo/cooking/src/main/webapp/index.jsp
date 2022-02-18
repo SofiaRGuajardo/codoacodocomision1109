@@ -91,6 +91,7 @@
             <div class="card-image">
               <a href="#"> <img class="img img-raised" src="img/vitel.jpg"> </a>
             </div>
+              <div class="ripple-cont"></div>
             <div class="table">
               <h6 class="category text-danger">Navidad</h6>
               <h4 class="card-caption">
